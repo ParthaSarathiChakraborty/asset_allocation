@@ -1,4 +1,5 @@
-# asset_allocation
+**Asset Allocation**
+
 Use macroeconomic indicators (e.g., inflation, yield curve, PMI) to predict market regimes (risk-on/off) and dynamically allocate to equity vs bonds vs cash.
 
 What I Learnt:
@@ -29,17 +30,15 @@ Sample Insight:
 
 🧩 Components:
 
-     Part	       |  Description
------------------------------------------------------------------------------------------------------------
-Data	           |  Download key macro indicators (FRED: Inflation, Fed Funds Rate, GDP growth, PMI, etc.)
-Preprocessing	   |  Normalize data, handle missing values, align by date
-Modeling	       |  Use KMeans or **Hidden Markov Model** (HMM) to identify regimes
-Allocation Logic |	Create rules for asset allocation per regime
-Backtest	       |  Compare regime-based strategy vs static 60/40
+1. Data -  Download key macro indicators (FRED: Inflation, Fed Funds Rate, GDP growth, PMI, etc.)
+2. Preprocessing -  Normalize data, handle missing values, align by date
+3. Modeling -  Use KMeans or **Hidden Markov Model** (HMM) to identify regimes
+4. Allocation Logic -  Create rules for asset allocation per regime
+5. Backtest -  Compare regime-based strategy vs static 60/40
 
 🛠️ Tools:
-	•	pandas, sklearn, **statsmodels**, matplotlib
-	•	yfinance for ETFs: SPY (stocks), TLT (bonds), SHY (cash)
-	•	fredapi or manual download for macro data
+	• pandas, sklearn, **statsmodels**, matplotlib
+	• yfinance for ETFs: SPY (stocks), TLT (bonds), SHY (cash)
+	• fredapi or manual download for macro data
 
 ⸻
