@@ -42,3 +42,80 @@ Sample Insight:
 	• fredapi or manual download for macro data
 
 ⸻
+
+# 🧠 Macro Regime-Based Asset Allocation Strategy
+
+A machine learning-driven investment strategy that dynamically adjusts asset allocation (SPY, TLT, SHY) based on prevailing macroeconomic regimes. The model uses both KMeans clustering and Hidden Markov Models (HMMs) to detect regime shifts from macro data and adapt portfolio weights accordingly.
+
+---
+
+## 📌 Objective
+To replicate how macro hedge funds and asset managers adjust asset exposure across economic cycles. The strategy simulates adaptive portfolio allocation using interpretable, rule-based logic layered on unsupervised and probabilistic regime detection.
+
+---
+
+## 📈 Strategy Flow
+
+1. **Data Collection**
+   - Macroeconomic indicators from FRED (CPI, Fed Funds, Employment, Yield Curve Spread, PPI)
+   - ETF prices from Yahoo Finance (SPY, TLT, SHY)
+
+2. **Feature Engineering**
+   - Year-over-year % changes in employment and PPI
+   - Monthly resampling and forward-filling for alignment
+
+3. **Regime Detection**
+   - **KMeans Clustering**: Groups macro conditions into 4 unsupervised clusters
+   - **Hidden Markov Model**: Captures sequential structure in economic regimes
+
+4. **Asset Allocation Rules**
+   - Assigns weight presets to SPY, TLT, SHY based on detected regime
+   - Compares performance of static SPY benchmark vs dynamic allocation
+
+5. **Backtesting + Evaluation**
+   - Metrics: CAGR, Sharpe Ratio, Max Drawdown
+   - Visualizations: Regime transitions, cumulative returns, heatmaps
+
+---
+
+## 📊 Results (Highlights)
+
+| Strategy | CAGR | Max Drawdown | Sharpe Ratio |
+|----------|------|--------------|---------------|
+| HMM Regime Allocation | 1.19% | -24.61% | 0.18 |
+| KMeans Strategy | ~ | ~ | ~ |
+| SPY Benchmark | ~ | ~ | ~ |
+
+✅ HMM showed smoother transitions and improved drawdown control versus SPY.  
+✅ KMeans captured broad regime clusters but lacked sequential modeling.
+
+---
+
+## 🧰 Tech Stack
+- Python, **pandas**, matplotlib, seaborn
+- scikit-learn, **hmmlearn**, yfinance
+- **FRED macroeconomic data
+**
+---
+
+## 📂 Structure
+
+- `notebooks/` — Jupyter notebook for full strategy walkthrough
+- `data/` — Cleaned FRED macroeconomic inputs
+- `plots/` — Strategy visualizations
+- `report/` — PDF write-up of methodology and results
+
+---
+
+## 💡 Next Steps
+
+- Integrate regime forecasts into forward-looking models
+- Combine macro signals with factor momentum (Project 2)
+- Build production-ready pipeline for real-time regime tracking
+
+---
+
+## 🙋 About Me
+
+I'm Partha Sarathi Chakraborty — an aspiring Quantitative Researcher with a CS background and deep interest in macro strategy, signals research, and data-driven investing.  
+This project was designed to simulate real-world investment modeling and signal deployment as done in hedge funds and institutional desks.
