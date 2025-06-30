@@ -98,7 +98,7 @@ To replicate how macro hedge funds and asset managers adjust asset exposure acro
 **
 ---
 
-## 📂 Structure
+## Structure
 
 - `notebooks/` — Jupyter notebook for full strategy walkthrough
 - `data/` — Cleaned FRED macroeconomic inputs
@@ -115,7 +115,7 @@ To replicate how macro hedge funds and asset managers adjust asset exposure acro
 
 ---
 
-## 🙋 About Me
+## About Me
 
 I'm Partha Sarathi Chakraborty — an aspiring Quantitative Researcher with a CS background and deep interest in macro strategy, signals research, and data-driven investing.  
 This project was designed to simulate real-world investment modeling and signal deployment as done in hedge funds and institutional desks.
